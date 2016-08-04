@@ -12,6 +12,9 @@
     <OutputPath>.</OutputPath>
     <Name>bh_sshserver</Name>
     <RootNamespace>bh_sshserver</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>10.0.21.31 22</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
