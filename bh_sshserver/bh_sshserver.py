@@ -50,8 +50,13 @@ try:
         print '[-] SSH negotiation failed'
 
     chan = bhSession.accept(20)
-    print '[+] Authenticated!'
-    print chan.recv(1024)
+    if chan is None:
+        print '[-] Failed to get a channel'
+        sys.exit(1)
+    else:
+        print '[+] Authenticated!'
+    
+    print (chan.recv(1024))
     chan.send('Welcome to bh_ssh')
 
     while True:
